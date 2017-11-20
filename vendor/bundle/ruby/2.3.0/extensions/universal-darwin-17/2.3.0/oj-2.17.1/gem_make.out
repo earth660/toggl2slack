@@ -1,0 +1,38 @@
+current directory: /Users/tsujidaichi/dev/slacktoggl/toggl_slacker/vendor/bundle/ruby/2.3.0/gems/oj-2.17.1/ext/oj
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20171120-20353-1xeulor.rb extconf.rb
+>>>>> Creating Makefile for ruby version 2.3.3 on universal.x86_64-darwin17 <<<<<
+creating Makefile
+
+current directory: /Users/tsujidaichi/dev/slacktoggl/toggl_slacker/vendor/bundle/ruby/2.3.0/gems/oj-2.17.1/ext/oj
+make "DESTDIR=" clean
+
+current directory: /Users/tsujidaichi/dev/slacktoggl/toggl_slacker/vendor/bundle/ruby/2.3.0/gems/oj-2.17.1/ext/oj
+make "DESTDIR="
+compiling val_stack.c
+compiling oj.c
+compiling object.c
+compiling compat.c
+compiling odd.c
+compiling strict.c
+compiling sparse.c
+compiling resolve.c
+compiling hash.c
+compiling hash_test.c
+compiling reader.c
+compiling dump.c
+compiling err.c
+compiling fast.c
+compiling scp.c
+compiling parse.c
+compiling saj.c
+compiling circarray.c
+compiling cache8.c
+linking shared-object oj/oj.bundle
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/libressl/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/libressl/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/lib'
+
+current directory: /Users/tsujidaichi/dev/slacktoggl/toggl_slacker/vendor/bundle/ruby/2.3.0/gems/oj-2.17.1/ext/oj
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 oj.bundle ./.gem.20171120-20353-iy3ndr/oj
