@@ -4,6 +4,7 @@ require_relative './job'
 
 handler do |job|
   toggl_job(job)
+  kie_job(job)
 end
 
 @job_days.each do |day|
@@ -14,11 +15,18 @@ end
   # 朝のメッセージ起動ジョブ
   eval %Q!every(1.week, :morning_#{day},     tz: "Tokyo", at: "#{day} #{@morning_time}")     { toggl_job(:morning) }!
   # お昼休みメッセージ起動ジョブ
-  eval %Q!every(1.week, :noon_#{day},        tz: "Tokyo", at: "#{day} #{@noon_time}")        { toggl_job(:noon) }!
+  eval %Q!every(1.week, :noon_#{day},        tz: "Tokyo", at: "#{day} #{@noon_time}")        { toggl_job(:noon)}!
   # お昼休み終了メッセージ起動ジョブ
   eval %Q!every(1.week, :after_noon_#{day},  tz: "Tokyo", at: "#{day} #{@after_noon_time}")  { toggl_job(:after_noon) }!
+  # おやつタイム
+  eval %Q!every(1.week, :oyatsu_#{day},      tz: "Tokyo", at: "#{day} #{@oyatsu_time}")      { toggl_job(:oyatsu) }!
+  # 夕方
+  eval %Q!every(1.week, :evening_#{day},     tz: "Tokyo", at: "#{day} #{@evening_time}")     { toggl_job(:evening) }!
+  # 21:00
+  eval %Q!every(1.week, :nine_#{day},        tz: "Tokyo", at: "#{day} #{@nine_time}")        { toggl_job(:nine) }!
   # 業務終了メッセージ起動ジョブ
   eval %Q!every(1.week, :night_#{day},       tz: "Tokyo", at: "#{day} #{@night_time}")       { toggl_job(:night) }!
   # 日報作成起動ジョブ
   eval %Q!every(1.week, :dailyreport_#{day}, tz: "Tokyo", at: "#{day} #{@dailyreport_time}") { toggl_job(:dailyreport) }!
 end
+

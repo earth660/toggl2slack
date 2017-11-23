@@ -34,6 +34,12 @@ class SimpleSlack::Toggl
       post_message_by(send_noon_message)
     when "after_noon"
       post_message_by(send_after_noon_message)
+    when "oyatsu"
+      post_message_by(send_oyatsu_message)
+    when "evening"
+      post_message_by(send_evening_message)
+    when "nine"
+      post_message_by(send_nine_message)
     when "night"
       post_message_by(send_night_message)
     when "dailyreport"
